@@ -28,3 +28,15 @@ for _ in range(t):
         print(y)
     else:
         print(x)
+
+#Problem2
+
+'''
+Neha has a square-shaped chart paper with the side length equal to N. She wants to cut out K x K squares from this chart paper. Find the maximum number of K x K squares she can cut from the entire chart paper.
+Note that, some part of the chart paper might not be a included in any K x K cutout square.
+'''
+#Solution
+t=int(input())
+for _ in range(t):
+    n,k=map(int,input().split())
+    print((n//k)**2)
