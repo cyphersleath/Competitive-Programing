@@ -21,3 +21,15 @@ class Solution:
         if a==0:
             return b
         return self.gcd(b%a,a)
+#Problem 3
+'''Given an array of N positive integers, find GCD of all the array elements.'''
+#Solution
+class Solution:
+    def gcd(self, n, arr):
+        from functools import reduce
+        def gcd_arr(a,b):
+            while b:
+                a,b=b,a%b
+            return a
+        return reduce(gcd_arr,arr)
+
