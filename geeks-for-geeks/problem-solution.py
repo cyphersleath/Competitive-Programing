@@ -13,3 +13,11 @@ class Solution:
             b=b//2
             a=int(a)*int(a)%m
         return result
+#Problem 2
+'''Given two positive integers a and b, find GCD of a and b.'''
+#Solution
+class Solution:
+    def gcd(self,a,b):
+        if a==0:
+            return b
+        return self.gcd(b%a,a)
