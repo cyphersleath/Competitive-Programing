@@ -33,3 +33,18 @@ class Solution:
             return a
         return reduce(gcd_arr,arr)
 
+#Problem 4
+'''
+Given two integers a and b, write a function lcmAndGcd() to compute their LCM and GCD. The function takes two integers a and b as input and returns a list containing their LCM and GCD.'''
+
+#Solution
+class Solution:
+    def lcmAndGcd(self, A , B):
+        def gcd(a,b):
+            if b == 0:
+                return a
+            return gcd(b,a%b)
+        def lcm(a,b):
+            return ((a*b)//gcd(a,b))
+        return (lcm(A,B),gcd(A,B))
+    
