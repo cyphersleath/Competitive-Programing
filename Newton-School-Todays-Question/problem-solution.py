@@ -69,3 +69,19 @@ for _ in range(t):
     else:
         cs=(10*(x//10))+10
     print(100-cs)
+
+#Problem 4
+'''
+Chef's bank gives him a unique offer - at the end of each year, they offer Chef to either add 1000 rupees to his bank account, or double the amount stored in his bank account. Chef initially has X rupees in his account. What is the maximum amount of money that Chef can accumulate after Y years?'''
+
+#Solution
+t=int(input())
+for _ in range(t):
+    x,y=map(int,input().split())
+    max_amount=0
+    while y:
+        ax=x+1000
+        mx=x*2
+        x=max(ax,mx)
+        y-=1
+    print(x)
