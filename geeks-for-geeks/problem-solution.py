@@ -47,4 +47,19 @@ class Solution:
         def lcm(a,b):
             return ((a*b)//gcd(a,b))
         return (lcm(A,B),gcd(A,B))
-    
+
+#Problem 5
+'''
+For an integer N find the number of trailing zeroes in N!.'''
+#Solution
+class Solution:
+    def trailingZeroes(self, N):
+        n=N
+        if (n<0):
+            return -1
+        count =0
+        while(n>=5):
+            n//=5
+            count+=n
+        return count
+
