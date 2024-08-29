@@ -85,3 +85,21 @@ for _ in range(t):
         x=max(ax,mx)
         y-=1
     print(x)
+#Problem 5
+'''
+Gaurav is currently standing at stair 0 and he wants to reach stair numbered X.
+Gaurav can climb either Y steps or 1 step in one move.
+Find the minimum number of moves required by him to reach exactly the stair numbered X.'''
+#solution
+t= int(input())
+for _ in range(t):
+    x,y = map(int,input().split())
+    c=0
+    while True:
+        if x/y==int(x/y):
+            c+=x//y
+            break
+        else:
+            x-=1
+            c+=1
+    print(c)
